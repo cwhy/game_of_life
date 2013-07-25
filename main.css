@@ -57,6 +57,8 @@ html {
 }
 .index-link:hover{
   border-bottom:solid 3px #ec545e;
+}
+.index-link:active{
   font-size:20px;
 }
 
@@ -71,6 +73,16 @@ html {
   margin-right:10px;
   padding:3px 0;
   cursor:pointer;
+}
+.top-controls a:hover{
+  border-bottom:solid 3px #ec545e;
+}
+
+.deactivated{
+  opacity:0.3;
+}
+.deactivated:hover{
+  cursor: not-allowed;
 }
 
 .board{
