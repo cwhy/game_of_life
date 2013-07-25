@@ -149,7 +149,6 @@ $(function () {
       dimensions: [100, 75]
   });
   e.click(function (event) {
-    alert(event.offsetX);
     board.toggle([event.offsetX, event.offsetY]);
     return false;
   });
