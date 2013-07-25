@@ -20,7 +20,7 @@ GOL.board = function (spec) {
         var padding = 1;
         for (var x = 0; x < dx; x += 1) {
             for (var y = 0; y < dy; y += 1) {
-                ctx.fillStyle = (grid[x][y]) ? 'rgb(90, 133, 255)' : 'rgb(230, 230, 230)';
+                ctx.fillStyle = (grid[x][y]) ? 'rgb(236, 84, 94)' : 'rgb(235, 235, 235)';
                 ctx.fillRect(
                     x * cw + padding,
                     y * ch + padding,
@@ -169,7 +169,6 @@ $(function () {
             $('#step').button('option', 'disabled', false);
         }
     });
-    $('.buttons button').button();
     $('#slider').slider({
 		value: 1500 - board.getSpeed(),
 		min: 0,

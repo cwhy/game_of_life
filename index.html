@@ -2,28 +2,28 @@
 <html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Conway's Game of Life</title>
+    <title>life 2</title>
     <link href="./main.css" type="text/css" media="screen" rel="stylesheet">
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.1/pure-min.css">
     <link href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" type="text/css" media="screen" rel="stylesheet">
+    <link href="./jquery-ui-mod.css" type="text/css" media="screen" rel="stylesheet">
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
     <script type="text/javascript" src="./board.js"></script>
   </head>
   <body>
     <div class="container">
-      <h1> life <span>2</span></h1>
+      <div id="title"> life <span>2</span></div>
       <div class="top-controls">
-	<button id="run" class="pure-button" role="button" aria-disabled="false">
+	<a id="run" role="button" aria-disabled="false">
 	  <span class="ui-button-text">Run</span>
-	</button>
-	<button id="step" class="pure-button" role="button" aria-disabled="true" disabled="">
+	</a>
+	<a id="step" role="button" aria-disabled="true">
 	  <span class="ui-button-text">Step</span>
-	</button>
-	<button id="clear" class="pure-button" role="button" aria-disabled="false">
+	</a>
+	<a id="clear" role="button" aria-disabled="false">
 	  <span class="ui-button-text">Clear</span>
 	</button>
-	<button id="randomize" class="pure-button" role="button" aria-disabled="false">
+	<a id="randomize" role="button" aria-disabled="false">
 	  <span class="ui-button-text">Randomize</span>
 	</button>
       </div>

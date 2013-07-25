@@ -1,0 +1,16 @@
+#slider .ui-slider-handle{
+  border-radius: 0px;
+  background: #0c7;
+  border: solid 1px #6eb;
+  cursor:pointer;
+}
+
+#slider .ui-state-focus{
+  outline:none;
+}
+
+#slider{
+  border-radius:0;
+  background:#dddddd;
+  border:solid 1px #dddddd;
+}
