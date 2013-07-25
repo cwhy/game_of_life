@@ -134,6 +134,7 @@ GOL.board = function (spec) {
   that.randomize();
   $('#step').addClass('deactivated');
   that.run();
+  $('#run').find('span').text('Pause');
 
   return that;
 };
