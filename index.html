@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Conway's Game of Life</title>
+      <link href="./main.css" type="text/css" media="screen" rel="stylesheet">
+      <link href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" type="text/css" media="screen" rel="stylesheet">
+      <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	  <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	  <script type="text/javascript" src="./board.js"></script>
+   </head>
+   <body>
+      <div class="container">
+         <h1>Conway's Game of <span>Life</span></h1>
+         <div class="buttons">
+            <div class="buttons_left">
+				<button id="run" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false">
+					<span class="ui-button-text">Pause</span>
+				</button>
+				<button id="step" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only ui-button-disabled ui-state-disabled" role="button" aria-disabled="true" disabled="">
+					<span class="ui-button-text">Step</span>
+				</button>
+			</div>
+            <div class="buttons_middle">
+               <p class="slow">Slow</p>
+               <p class="fast">Fast</p>
+               <div id="slider" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
+				<a class="ui-slider-handle ui-state-default ui-corner-all" href="http://blooming-mist-4344.herokuapp.com/#" style="left: 40%;"></a>
+			  </div>
+            </div>
+            <div class="buttons_right">
+				<button id="clear" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false">
+					<span class="ui-button-text">Clear</span>
+				</button>
+				<button id="randomize" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false">
+					<span class="ui-button-text">Randomize</span>
+				</button>
+			</div>
+         </div>
+         <div class="board">
+            <canvas width="800" height="600"></canvas>
+         </div>
+      </div>
+   </body>
+</html>
