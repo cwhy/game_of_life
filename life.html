@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>life 2</title>
+    <link href="./main.css" type="text/css" media="screen" rel="stylesheet">
+    <link href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" type="text/css" media="screen" rel="stylesheet">
+    <link href="./jquery-ui-mod.css" type="text/css" media="screen" rel="stylesheet">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script type="text/javascript">
+      window.onload = function(){
+	function loadScript(url)
+	{
+	  var head = document.getElementsByTagName('head')[0];
+	  var script = document.createElement('script');
+	  script.type = 'text/javascript';
+	  script.src = url;
+	  head.appendChild(script);
+	}
+	var life = document.location.href.split("#")[1];
+	switch(life)
+	{
+	  case "extended":
+	  loadScript("./board_extended.js");
+	  break;
+	  default:
+	  loadScript("./board_original.js");
+	}
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div id="title"> 
+	<a href="./index.html">&lt;</a>
+	life <span>2</span>
+      </div>
+      <div class="top-controls">
+	<a id="run" role="button" aria-disabled="false">
+	  <span class="ui-button-text">Run</span>
+	</a>
+	<a id="step" role="button" aria-disabled="true">
+	  <span class="ui-button-text">Step</span>
+	</a>
+	<a id="clear" role="button" aria-disabled="false">
+	  <span class="ui-button-text">Clear</span>
+	</button>
+	<a id="randomize" role="button" aria-disabled="false">
+	  <span class="ui-button-text">Randomize</span>
+	</button>
+      </div>
+      <div class="board">
+	<canvas width="800" height="600"></canvas>
+      </div>
+      <div class="bottom-controls">
+	<div class="slow">Slow</div>
+	<div class="fast">Fast</div>
+	<div id="slider" class="ui-slider">
+	  <a class="ui-slider-handle ui-state-default" href="#"></a>
+	</div>
+      </div>
+    </div>
+  </body>
+</html>

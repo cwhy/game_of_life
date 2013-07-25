@@ -1,5 +1,5 @@
 html {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Calisto MT", "Bookman Old Style", Bookman, "Goudy Old Style", Garamond, "Hoefler Text", "Bitstream Charter", Georgia, serif;
   color:#333;
 }
 
@@ -17,9 +17,47 @@ html {
   font-size:45px;
 }
 
+#title a{
+  color:#333;
+  font-weight:bold;
+  text-decoration:none;
+}
 .container {
   width:800px;
   margin:20px auto;
+}
+
+.index-left{
+  position:fixed;
+  top:50%;
+  left:50%;
+  margin-left:-142px;
+  margin-top:-60px;
+  height:100px;
+  width:150px;
+}
+
+.index-right{
+  position:fixed;
+  top:50%;
+  left:50%;
+  margin-top:-51px;
+  margin-left:30px;
+  height:100px;
+  width:200px;
+}
+
+.index-link{
+  font-size:19px;
+  color:#333;
+  text-decoration:none;
+  border-bottom:solid 3px #0c7;
+  line-height:45px;
+  padding-bottom:3px;
+}
+.index-link:hover{
+  border-bottom:solid 3px #ec545e;
+  font-size:20px;
 }
 
 .top-controls{
