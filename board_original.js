@@ -132,6 +132,7 @@ GOL.board = function (spec) {
 
   // init grid
   that.randomize();
+  $('#step').addClass('deactivated');
   that.run();
 
   return that;
