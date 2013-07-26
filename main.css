@@ -27,10 +27,12 @@ html {
   margin:20px auto;
 }
 
-.index-left{
+.index-left, .intro-left, .index-right, .intro-right{
   position:fixed;
   top:50%;
   left:50%;
+}
+.index-left{
   margin-left:-142px;
   margin-top:-60px;
   height:100px;
@@ -38,9 +40,6 @@ html {
 }
 
 .index-right{
-  position:fixed;
-  top:50%;
-  left:50%;
   margin-top:-51px;
   margin-left:30px;
   height:100px;
@@ -54,14 +53,42 @@ html {
   border-bottom:solid 3px #0c7;
   line-height:45px;
   padding-bottom:3px;
+  border-bottom-right-radius: 20px;
+  opacity:0.7;
 }
 .index-link:hover{
-  border-bottom:solid 3px #ec545e;
+  opacity:1;
+  font-weight:bold;
 }
 .index-link:active{
-  font-size:20px;
+  border-bottom:solid 3px #ec545e;
 }
 
+.intro-left{
+  margin-left:-190px;
+  margin-top:-60px;
+  height:100px;
+  width:200px;
+}
+
+.intro-right{
+  margin-top:-80px;
+  margin-left:30px;
+  height:100px;
+  width:395px;
+}
+
+.intro-text{
+  font-size:19px;
+  line-height:35px;
+}
+
+.intro-text a{
+  text-decoration:none;
+  border-bottom:solid 2px #0c7;
+  font-weight:bold;
+  color:#0c7;
+}
 .top-controls{
   margin-top: -35px;
   float:right;
