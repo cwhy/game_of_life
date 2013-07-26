@@ -24,6 +24,9 @@ window.onload = function(){
     case "extended":
       loadScript("./life2_extended.js",life2_ui);
       break;
+    case "competition":
+      loadScript("./life2_competition.js",life2_ui);
+      break;
     default:
       loadScript("./life2_original.js",life2_ui);
   }
