@@ -39,9 +39,9 @@ function life2_ui() {
   var ctx = e.get(0).getContext('2d');
   var board = GOL.board({
     context: ctx,
-      width: width,
-      height: height,
-      dimensions: [100, 75]
+    width: width,
+    height: height,
+    dimensions: [100, 75]
   });
   e.click(function (e) {
     var offX  = (e.offsetX || e.clientX - $(e.target).offset().left);

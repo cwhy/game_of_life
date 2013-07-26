@@ -37,23 +37,14 @@ GOL.board = function (spec) {
     var n = 0;
     var rangeX = [];
     var rangeY = [];
-    if (x === 0) {
-      rangeX = [dx - 1, x, x + 1];
-    } else if (x === (dx - 1)) {
-      rangeX = [x - 1, x, 0];
-    } else {
-      rangeX = [x - 1, x, x + 1];
-    }
-    if (y === 0) {
-      rangeY = [dy - 1, y, y + 1];
-    } else if (y === (dy - 1)) {
-      rangeY = [y - 1, y, 0];
-    } else {
-      rangeY = [y - 1, y, y + 1];
-    }
+    rangeX = [x-2, x-1, x, x+1, x+2];
+    rangeY = [y-2, y-1, y, y+1, y+2];
     $.each(rangeX, function (ix, vx) {
       $.each(rangeY, function (iy, vy) {
-	if (!(ix === 1 && iy === 1) && grid[vx][vy]) {
+	var px = ((vx % dx) + dx) % dx;
+	var py = ((vy % dy) + dy) % dy;
+	
+	if (!(ix === 2 && iy === 2) && grid[px][py]) {
 	  n += 1;
 	}
       });
@@ -88,11 +79,11 @@ GOL.board = function (spec) {
     for (var x = 0; x < dx; x += 1) {
       for (var y = 0; y < dy; y += 1) {
 	var n = neighbours(x, y);
-	if (n < 2) {
+	if (n < 5) {
 	  newGrid[x][y] = false;
-	} else if (n > 3) {
+	} else if (n > 16) {
 	  newGrid[x][y] = false;
-	} else if (!grid[x][y] && n === 3) {
+	} else if (!grid[x][y] && n>10 && n<16) {
 	  newGrid[x][y] = true;
 	}
       }
