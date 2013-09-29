@@ -9,7 +9,7 @@ window.onload = function(){
     script.type = 'text/javascript';
     script.src = url;
 
-    // then bind the event to the callback function 
+    // then bind the event to the callback function
     // there are several events for cross browser compatibility
     script.onreadystatechange = callback;
     script.onload = callback;
